@@ -1,6 +1,6 @@
 package biblioteca;
 
-public class Usuario {
+public class Usuario implements Notificable{
     private String nombre;
     private int dni;
 
@@ -28,5 +28,10 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" + "nombre=" + nombre + ", dni=" + dni + '}';
+    }
+
+    @Override
+    public void enviarSaludo() {
+        System.out.println("Bienvenido " + nombre);
     }
 }
